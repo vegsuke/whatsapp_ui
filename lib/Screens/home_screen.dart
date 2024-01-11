@@ -9,16 +9,17 @@ class HomeScreen extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('WhatsApp'),
+            title: const Text('WhatsApp',style: TextStyle(color: Colors.white),),
             centerTitle: false,
+            backgroundColor: Colors.teal,
             actions: [
-              const Icon(Icons.camera_alt_outlined),
+              const Icon(Icons.camera_alt_outlined,color: Colors.white,),
               const SizedBox(width: 10,),
-              const Icon(Icons.search_outlined),
+              const Icon(Icons.search_outlined, color: Colors.white,),
               const SizedBox(width: 10,),
-              const Icon(Icons.more_vert_outlined),
+
               PopupMenuButton(
-                icon:  const Icon(Icons.more_vert_outlined),
+                icon:  const Icon(Icons.more_vert_outlined, color: Colors.white,),
                 itemBuilder: (context) => [
                   const PopupMenuItem(
                     value: 1,
@@ -41,10 +42,10 @@ class HomeScreen extends StatelessWidget {
             bottom: const TabBar(tabs: [
 
 
-              Tab(child:Icon(Icons.groups),),
-              Tab(child:Text('Chats'),),
-              Tab(child:Text('Status'),),
-              Tab(child:Text('Calls'),),
+              Tab(child:Icon(Icons.groups, color: Colors.white,),),
+              Tab(child:Text('Chats',style: TextStyle(color: Colors.white),),),
+              Tab(child:Text('Status',style: TextStyle(color: Colors.white),),),
+              Tab(child:Text('Calls',style: TextStyle(color: Colors.white),),),
             ]
             ),
           ),
