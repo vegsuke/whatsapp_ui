@@ -49,11 +49,23 @@ class HomeScreen extends StatelessWidget {
             ]
             ),
           ),
-          body: const TabBarView(children: [
-            Icon(Icons.groups),
-            Text('Chats'),
+          body:TabBarView(children: [
+            Text('Community'),
+            ListView.builder(
+                itemCount: 50,
+                itemBuilder: (context, index) => const ListTile(
+                  leading: CircleAvatar(backgroundImage: NetworkImage('url'),),
+                  trailing: Text('5:40pm'),
+                  title: Text('P92 IT Solutions'),
+                )),
             Text('Status'),
-            Text('Calls'),
+            ListView.builder(
+                itemCount: 50,
+                itemBuilder: (context, index) => ListTile(
+                  leading: CircleAvatar(backgroundImage: NetworkImage('url'),),
+                  trailing: Icon(index % 2 == 0 ? Icons.phone : Icons.video_call_outlined),
+                  title: Text('P92 IT Solutions'),
+                )),
           ]),
         )
     );
